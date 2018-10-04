@@ -2,8 +2,7 @@ package com.company;
 
 public abstract class Person {
     // Fields
-    private String firstName;
-    private String familyName;
+    private String firstName, familyName;
 
     // Constructor
     public Person(String firstName, String familyName) {
@@ -15,21 +14,16 @@ public abstract class Person {
     public String getFirstName() {
         return firstName;
     }
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
     public String getFamilyName() {
         return familyName;
+    }
+    public void setFamilyName(String familyName) {
+        this.familyName = familyName;
     }
     public boolean equals(Person p) {
         return (firstName.equals(familyName));
     }
 }
-
-
-/*
-Fields:
-firstName, familyName
-Methods:
-Constructor – must initialize fields
-getFirstName() - returns first name
-getFamilyName() - returns family name
-equals(Person p) – returns true if first and family name are equal
- */
