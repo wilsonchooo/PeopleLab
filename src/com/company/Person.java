@@ -2,13 +2,11 @@ package com.company;
 
 public abstract class Person {
     // Fields
-    private String firstName;
-    private String familyName;
+    private String type;
 
     // Constructor
-    public Person(String firstName, String familyName) {
-        this.firstName = firstName;
-        this.familyName = familyName;
+    public Person(String type) {
+        this.type = type;
     }
 
     public abstract String getFirstName();
