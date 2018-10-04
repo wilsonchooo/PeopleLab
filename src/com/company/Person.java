@@ -11,6 +11,7 @@ public abstract class Person {
         this.familyName = familyName;
     }
 
+    // Methods
     public String getFirstName() {
         return firstName;
     }
