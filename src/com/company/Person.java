@@ -2,16 +2,24 @@ package com.company;
 
 public abstract class Person {
     // Fields
-    private String type;
+    private String firstName;
+    private String familyName;
 
     // Constructor
-    public Person(String type) {
-        this.type = type;
+    public Person(String firstName, String familyName) {
+        this.firstName = firstName;
+        this.familyName = familyName;
     }
 
-    public abstract String getFirstName();
-    public abstract String getFamilyName();
-    public abstract boolean equals(Person p);
+    public String getFirstName() {
+        return this.firstName;
+    }
+    public String getFamilyName() {
+        return this.familyName;
+    }
+    public boolean equals(Person p) {
+        return (this.firstName.equals(this.familyName));
+    }
 }
 
 
