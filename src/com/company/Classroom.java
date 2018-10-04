@@ -1,27 +1,31 @@
 package com.company;
 
-public class Classroom extends Person {
-    private String firstName;
-    private String familyName;
+public class Classroom {
+    private Student[] students;
+    private Teacher teacher;
 
-    public Classroom(String firstName, String familyName) {
-        super("Classroom");
-        this.firstName = firstName;
-        this.familyName = familyName;
+    public Classroom(Student[] student, Teacher teacher) {
+        this.students = student;
+        this.teacher = teacher;
     }
 
-    public String getFirstName() {
-        return this.firstName;
+    public String getSubject() {
+        return teacher.getSubject();
     }
-    public String getFamilyName() {
-        return this.familyName;
+    public double classAverage() {
+        double avg = 0.0;
+        for (int i = 0; i < students.length; i ++) {
+            avg += students[i].getGPA();
+        }
+        return avg / students.length;
     }
-    public boolean equals(Person p) {
-        return (this.firstName.equals(this.familyName));
+    public String printClass() {
+        String[] x;
+        for (int i = 0; i < students.length(); i ++) {
+            x[i] = students[i]. // here
+        }
+        return teacher.toString +
     }
-
-
-
 }
 
 /*
