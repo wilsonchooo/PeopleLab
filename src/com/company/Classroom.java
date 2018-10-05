@@ -1,17 +1,39 @@
 package com.company;
 
 public class Classroom {
+    // Fields
     private Student[] students;
     private Teacher teacher;
 
+    // Constructor
     public Classroom(Student[] student, Teacher teacher) {
         this.students = student;
         this.teacher = teacher;
     }
 
-    public String getSubject() {
-        return teacher.getSubject();
+    // Methods
+
+    // Getters
+    public Student[] getStudents() {
+        return students;
     }
+    public Teacher getTeacher() {
+        return teacher;
+    }
+
+    // Setters
+    public void setStudents(Student[] students) {
+        this.students = students;
+    }
+    public void setTeacher(Teacher teacher) {
+        this.teacher = teacher;
+    }
+
+    /**
+     * Adds up the GPAs of all students and divides by # of students.
+     * @return average of GPAs of students
+     */
+
     public double classAverage() {
         double avg = 0.0;
         for (int i = 0; i < students.length; i ++) {
@@ -19,6 +41,11 @@ public class Classroom {
         }
         return avg / students.length;
     }
+
+    /**
+     * @return class Teacher, then subject, then all students in the class.
+     */
+
     public String printClass() {
         String[] x; x = new String[students.length];
         for (int i = 0; i < students.length; i ++) {
