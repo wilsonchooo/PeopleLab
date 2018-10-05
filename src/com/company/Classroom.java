@@ -50,9 +50,9 @@ public class Classroom {
     public String printClass() {
         String x = "";
         for (int i = 0; i < students.length; i ++) {
-            x += (students[i].toString() + "; ");
+            x += "\n" + (i + 1) + ". " + students[i].toString();
         }
-        return teacher.toString() + ", " + teacher.getSubject() + ". Students: " + x;
+        return teacher.toString() + ", " + teacher.getSubject() + ". \nStudents: " + x;
     }
 }
 

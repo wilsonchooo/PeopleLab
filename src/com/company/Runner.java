@@ -14,7 +14,7 @@ public class Runner {
         }
         Classroom ourClassroom = new Classroom(ourStudents, ourTeacher);
         System.out.println(ourClassroom.printClass());
-        System.out.println(ourClassroom.classAverage());
+        System.out.println("Class Average: " + ourClassroom.classAverage());
     }
     public static Student randomStudent() {
         return new Student(firstNames[(int)(Math.random() * 32)],familyNames[(int)(Math.random() * 32)],(Math.random() * 4),12,"Software Engineering");
