@@ -20,11 +20,11 @@ public class Classroom {
         return avg / students.length;
     }
     public String printClass() {
-        String[] x;
-        for (int i = 0; i < students.length(); i ++) {
-            x[i] = students[i]. // here
+        String[] x; x = new String[students.length];
+        for (int i = 0; i < students.length; i ++) {
+            x[i] = students[i].toString();
         }
-        return teacher.toString +
+        return teacher.toString() + ", " + teacher.getSubject() + ". Students: " + x;
     }
 }
 
