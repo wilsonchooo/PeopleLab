@@ -16,24 +16,33 @@ public class Student extends Person {
     }
 
     // Methods
+
+    // Getters
     public double getGPA() {
         return GPA;
-    }
-    public void setGPA(double GPA) {
-        this.GPA = GPA;
     }
     public int getGrade() {
         return grade;
     }
-    public void setGrade(int grade) {
-        this.grade = grade;
-    }
     public String getMajor() {
         return major;
+    }
+
+    // Setters
+    public void setGPA(double GPA) {
+        this.GPA = GPA;
+    }
+    public void setGrade(int grade) {
+        this.grade = grade;
     }
     public void setMajor(String major) {
         this.major = major;
     }
+
+    /**
+     * @return the student's "FamilyName, FirstName".
+     */
+
     public String toString() {
         return getFamilyName() + ", " + getFirstName();
     }
