@@ -2,14 +2,13 @@ package com.company;
 
 public abstract class Teacher extends Person {
     //Fields
-    public String Subject;
-    public String Title;
+    private String Subject;
+    private String Title;
 
     //Constructor
-    public abstract String getFamilyName();
-    public Teacher(String Subject, String Title)
+    public Teacher(String firstName, String familyName, String Subject, String Title)
     {
-        super("Teacher", "familyName");
+        super(firstName, familyName);
         this.Subject = Subject;
         this.Title = Title;
     }
@@ -19,7 +18,7 @@ public abstract class Teacher extends Person {
     }
     public String toString()
     {
-        return Title + ". " + familyName;
+        return Title + ". " + getFamilyName();
     }
 }
 
