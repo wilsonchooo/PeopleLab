@@ -6,8 +6,8 @@ public class Classroom {
     private Teacher teacher;
 
     // Constructor
-    public Classroom(Student[] student, Teacher teacher) {
-        this.students = student;
+    public Classroom(Student[] students, Teacher teacher) {
+        this.students = students;
         this.teacher = teacher;
     }
 
@@ -35,10 +35,11 @@ public class Classroom {
      */
 
     public double classAverage() {
-        double avg = 0.0;
-        for (int i = 0; i < students.length; i ++) {
-            avg += students[i].getGPA();
-        }
+        double avg = 0;
+
+        for (Student cur : students)
+            avg += cur.getGPA();
+
         return avg / students.length;
     }
 

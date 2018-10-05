@@ -2,15 +2,14 @@ package com.company;
 
 public class Teacher extends Person {
     // Fields
-    private String Subject;
-    private String Title;
+    private String subject, title;
 
     // Constructor
-    public Teacher(String firstName, String familyName, String Subject, String Title)
+    public Teacher(String firstName, String familyName, String subject, String title)
     {
         super(firstName, familyName);
-        this.Subject = Subject;
-        this.Title = Title;
+        this.subject = subject;
+        this.title = title;
     }
 
     // Methods
@@ -18,18 +17,18 @@ public class Teacher extends Person {
     // Getters
     public String getSubject()
     {
-        return Subject;
+        return subject;
     }
     public String getTitle() {
-        return Title;
+        return title;
     }
 
     // Setters
     public void setSubject(String subject) {
-        Subject = subject;
+        this.subject = subject;
     }
     public void setTitle(String title) {
-        Title = title;
+        this.title = title;
     }
 
     /**
@@ -38,7 +37,7 @@ public class Teacher extends Person {
 
     public String toString()
     {
-        return Title + ". " + getFamilyName();
+        return title + ". " + getFamilyName();
     }
 }
 
