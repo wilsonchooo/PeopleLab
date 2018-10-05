@@ -39,10 +39,10 @@ public class Student extends Person {
     }
 
     /**
-     * @return the student's "FamilyName, FirstName".
+     * @return the student's "FamilyName, FirstName, GPA, Grade, Major".
      */
 
     public String toString() {
-        return getFamilyName() + ", " + getFirstName();
+        return getFamilyName() + ", " + getFirstName() + ", " + getGPA() + ", " + getGrade() + ", " + getMajor();
     }
 }

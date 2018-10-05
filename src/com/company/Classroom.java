@@ -49,7 +49,7 @@ public class Classroom {
 
     public String printClass() {
         String x = "";
-        for (int i = 0; i < students.length; i ++) {
+        for (int i = 0; i < students.length; i++) {
             x += "\n" + (i + 1) + ". " + students[i].toString();
         }
         return teacher.toString() + ", " + teacher.getSubject() + ". \nStudents: " + x;
