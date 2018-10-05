@@ -1,7 +1,7 @@
 package com.company;
 
 public abstract class Teacher extends Person {
-    //Field
+    //Fields
     public String Subject;
     public String Title;
 
