@@ -1,7 +1,6 @@
 package com.company;
 
 public class Student extends Person {
-
     // Fields
     private double GPA;
     private int grade;
