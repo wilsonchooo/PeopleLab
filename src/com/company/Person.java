@@ -11,19 +11,29 @@ public abstract class Person {
     }
 
     // Methods
+
+    // Getters
     public String getFirstName() {
         return firstName;
-    }
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
     }
     public String getFamilyName() {
         return familyName;
     }
+
+    // Setters
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
     public void setFamilyName(String familyName) {
         this.familyName = familyName;
     }
+
+    /**
+     * @param p Person object to compare to.
+     * @return true if first and family name are equal.
+     */
+
     public boolean equals(Person p) {
-        return (firstName.equals(familyName));
+        return (p.firstName.equals(firstName)) && (p.familyName.equals(familyName));
     }
 }
