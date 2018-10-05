@@ -8,14 +8,22 @@ public class Runner {
     // Methods
     public static void main(String[] args) {
         Teacher ourTeacher = new Teacher("Nathan","Folwell","AP Java","Mr");
+
         Student[] ourStudents = new Student[32];
         for (int i = 0; i < 32; i ++) {
             ourStudents[i] = randomStudent();
         }
+
         Classroom ourClassroom = new Classroom(ourStudents, ourTeacher);
+
         System.out.println(ourClassroom.printClass());
         System.out.println("Class Average: " + ourClassroom.classAverage());
     }
+
+    /**
+     * Builds a random student with a random first name, last name, and GPA.
+     * @return Student
+     */
     public static Student randomStudent() {
         return new Student(firstNames[(int)(Math.random() * 32)],familyNames[(int)(Math.random() * 32)],(Math.random() * 4),12,"Software Engineering");
     }
