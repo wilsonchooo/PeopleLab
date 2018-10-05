@@ -48,9 +48,9 @@ public class Classroom {
      */
 
     public String printClass() {
-        String[] x = new String[students.length];
+        String x = "";
         for (int i = 0; i < students.length; i ++) {
-            x[i] = students[i].toString();
+            x += (students[i].toString() + "; ");
         }
         return teacher.toString() + ", " + teacher.getSubject() + ". Students: " + x;
     }
