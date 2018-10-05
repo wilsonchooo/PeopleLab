@@ -1,6 +1,6 @@
 package com.company;
 
-public abstract class Teacher extends Person {
+public class Teacher extends Person {
     // Fields
     private String Subject;
     private String Title;
