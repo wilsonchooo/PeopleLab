@@ -7,17 +7,19 @@ public class Runner {
 
     // Methods
     public static void main(String[] args) {
+        int classSize = 32;
+
         Teacher ourTeacher = new Teacher("Nathan","Folwell","AP Java","Mr");
 
-        Student[] ourStudents = new Student[32];
-        for (int i = 0; i < 32; i ++) {
+        Student[] ourStudents = new Student[classSize];
+        for (int i = 0; i < classSize; i ++) {
             ourStudents[i] = randomStudent();
         }
 
         Classroom ourClassroom = new Classroom(ourStudents, ourTeacher);
 
         System.out.println(ourClassroom.printClass());
-        System.out.println("Class Average: " + ourClassroom.classAverage());
+        System.out.println("\nClass Average: " + ourClassroom.classAverage());
     }
 
     /**
@@ -25,6 +27,10 @@ public class Runner {
      * @return Student
      */
     public static Student randomStudent() {
-        return new Student(firstNames[(int)(Math.random() * 32)],familyNames[(int)(Math.random() * 32)],(Math.random() * 4),12,"Software Engineering");
+        String randomFirstName = firstNames[(int)(Math.random() * firstNames.length)];
+        String randomFamilyName = familyNames[(int)(Math.random() * familyNames.length)];
+        double randomGPA = Math.round((Math.random() * 3 + 1) * 100) / 100.0;
+
+        return new Student(randomFirstName, randomFamilyName, randomGPA,12,"Software Engineering");
     }
 }

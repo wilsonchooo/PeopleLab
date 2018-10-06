@@ -43,6 +43,9 @@ public class Student extends Person {
      */
 
     public String toString() {
-        return getFamilyName() + ", " + getFirstName() + ", " + getGPA() + ", " + getGrade() + ", " + getMajor();
+        return getFamilyName() + ", " + getFirstName() +
+                " | GPA: " + getGPA() +
+                " | Grade: " + getGrade() +
+                " | Major: " + getMajor();
     }
 }
