@@ -7,7 +7,7 @@ public class Runner {
 
     // Methods
     public static void main(String[] args) {
-        int classSize = 32;
+        int classSize = 36;
 
         Teacher ourTeacher = new Teacher("Nathan","Folwell","AP Java","Mr");
 

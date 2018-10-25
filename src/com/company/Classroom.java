@@ -4,11 +4,13 @@ public class Classroom {
     // Fields
     private Student[] students;
     private Teacher teacher;
+    private Student[][] seatingChart = new Student[6][6];
 
     // Constructor
     public Classroom(Student[] students, Teacher teacher) {
         this.students = students;
         this.teacher = teacher;
+        fillSeats();
     }
 
     // Methods
@@ -57,5 +59,15 @@ public class Classroom {
         return "Teacher: " + teacher.toString() +
                 "\nSubject: " + teacher.getSubject() +
                 "\nStudents: " + studentString;
+    }
+
+    private void fillSeats() {
+        int idx = 0;
+        for (Student[] studentArr : seatingChart) {
+            for (int i = 0; i < studentArr.length; i++) {
+                studentArr[i] = students[idx];
+                idx++;
+            }
+        }
     }
 }
