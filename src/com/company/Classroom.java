@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Arrays;
+
 public class Classroom {
     // Fields
     private Student[] students;
@@ -10,6 +12,7 @@ public class Classroom {
     public Classroom(Student[] students, Teacher teacher) {
         this.students = students;
         this.teacher = teacher;
+        fillSeats();
     }
 
     // Methods
@@ -18,6 +21,7 @@ public class Classroom {
     public Student[] getStudents() {
         return students;
     }
+
     public Teacher getTeacher() {
         return teacher;
     }
@@ -26,12 +30,14 @@ public class Classroom {
     public void setStudents(Student[] students) {
         this.students = students;
     }
+
     public void setTeacher(Teacher teacher) {
         this.teacher = teacher;
     }
 
     /**
      * Adds up the GPAs of all students and divides by # of students.
+     *
      * @return average of GPAs of students
      */
 
@@ -61,6 +67,25 @@ public class Classroom {
     }
 
 
+    private void fillSeats() {
+
+        int idx = 0;
+        for (int i = 0; i < seatingChart.length; i++) {
+
+            for (int x = 0; i < seatingChart[x].length; x++) {
+
+                seatingChart[i][x] = students[idx];
+
+                idx++;
+            }
+        }
+        System.out.println(Arrays.deepToString(seatingChart));
 
 
+
+
+
+
+
+    }
 }
