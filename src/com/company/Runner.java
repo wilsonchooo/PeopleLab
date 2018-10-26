@@ -19,6 +19,7 @@ public class Runner {
         Classroom ourClassroom = new Classroom(ourStudents, ourTeacher);
 
         System.out.println(ourClassroom.printClass());
+        System.out.println(ourClassroom.printSeatingChart());
         System.out.println("\nClass Average: " + ourClassroom.classAverage());
     }
 

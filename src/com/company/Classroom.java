@@ -5,6 +5,7 @@ public class Classroom {
     private Student[] students;
     private Teacher teacher;
     private Student[][] seatingChart = new Student[6][6];
+    private int maxNameLength;
 
     // Constructor
     public Classroom(Student[] students, Teacher teacher) {
@@ -38,15 +39,13 @@ public class Classroom {
 
     public double classAverage() {
         double sum = 0;
-
         for (Student cur : students)
             sum += cur.getGPA();
-
         return sum / students.length;
     }
 
     /**
-     * @return class Teacher, then subject, then all students in the class.
+     * @return class Teacher, then subject, then all students in the class as a linear list.
      */
 
     public String printClass() {
@@ -61,11 +60,38 @@ public class Classroom {
                 "\nStudents: " + studentString;
     }
 
+    /**
+     * Uses the 2-dimensional seating chart array to print out the students in rows/columns.
+     * Only names of students are printed for brevity.
+     * @return A string with students' names arranged by the seating chart.
+     */
+    public String printSeatingChart() {
+        String out = "Seating Chart";
+        for (Student[] studentArr : seatingChart) {
+            out += "\n";
+            for (Student student : studentArr) {
+                out += student.getName();
+                for (int i = 0; i < maxNameLength - student.getName().length(); i++)
+                    out += " ";
+                out += " | ";
+            }
+        }
+        return out;
+    }
+
+    /**
+     * Populates the seatingChart 2-dimensional array with the students array
+     * by each column, then each row.
+     */
     private void fillSeats() {
         int idx = 0;
         for (Student[] studentArr : seatingChart) {
             for (int i = 0; i < studentArr.length; i++) {
-                studentArr[i] = students[idx];
+                if (students[idx] == null)
+                    break;
+                Student student = students[idx];
+                maxNameLength = Math.max(maxNameLength, student.getName().length());
+                studentArr[i] = student;
                 idx++;
             }
         }

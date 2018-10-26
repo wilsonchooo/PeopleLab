@@ -36,4 +36,11 @@ public abstract class Person {
     public boolean equals(Person p) {
         return (p.firstName.equals(firstName)) && (p.familyName.equals(familyName));
     }
+
+    /**
+     * @return the first name and last name, delimited by a space.
+     */
+    public String getName() {
+        return firstName + " " + familyName;
+    }
 }
